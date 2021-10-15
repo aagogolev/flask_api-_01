@@ -1,0 +1,23 @@
+
+Запросы;
+
+GET	http://[hostname]/rae/api/tasks	Получить список задач
+
+GET	http://[hostname]/rae/api/tasks/[task_id]	Получить задачу
+
+POST Тестируется через curl -i -H "Content-Type: application/json" -X POST -d '{"title":"novay zadacha"}' http://localhost:5000/rae/api/tasks
+     в windows curl -i -H "Content-Type: application/json" -X POST -d "{"""title""":"""novay zadacha"""}" http://localhost:5000/rae/api/tasks
+
+PUT	Тестируем через curl -i -H "Content-Type: application/json" -X PUT -d '{"done":false}' http://localhost:5000/rae/api/tasks/НОМЕР ЗАДАЧИ Обновить существующую задачу
+
+DELETE	Тестируем через curl -X DELETE  http://localhost:5000/rae/api/tasks/НОМЕР ЗАДАЧИ	Удалить задачу
+
+Свойства объекта задача;
+
+id: уникальный идентификатор задачи. Тип Numeric.
+title: Краткое описание задачи. Тип String.
+description: подробное описание задачи. Тип Text.
+done: отметка о выполнении. Тип Boolean.
+
+и изучи работу с постменом на примере этого приложения.....
+пишу объебанный))
